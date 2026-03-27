@@ -1,0 +1,41 @@
+#WAP in Python to:
+Take a list of student names with their marks stored as tuples:
+Example: [("Aman", 78), ("Riya", 85), ("Aman", 90), ("Riya", 88)]
+Convert this into a dictionary where:
+Keys = student names
+Values = list of marks
+Then:
+Calculate average marks for each student
+Display the student with the highest average#
+
+# Step 1: Given list of tuples
+students = [("Aman", 78), ("Riya", 85), ("Aman", 90), ("Riya", 88)]
+
+# Step 2: Convert into dictionary (name → list of marks)
+student_dict = {}
+
+for name, marks in students:
+    if name in student_dict:
+        student_dict[name].append(marks)
+    else:
+        student_dict[name] = [marks]
+
+# Step 3: Calculate average marks for each student
+avg_dict = {}
+for name, marks_list in student_dict.items():
+    avg = sum(marks_list) / len(marks_list)
+    avg_dict[name] = avg
+
+# Step 4: Find student with highest average
+top_student = max(avg_dict, key=avg_dict.get)
+
+# Step 5: Display results
+print("Student Dictionary (Name: Marks List):")
+print(student_dict)
+
+print("\nAverage Marks:")
+for name, avg in avg_dict.items():
+    print(name, ":", avg)
+
+print("\nStudent with Highest Average:", top_student)
+print("Highest Average Marks:", avg_dict[top_student])
