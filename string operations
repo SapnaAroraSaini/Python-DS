@@ -1,0 +1,22 @@
+WAP in Python to: Take a sentence as input. Perform the following operations: Count the frequency of each character (excluding spaces) Identify the first non-repeating character Convert the string into title case without using built-in title() function Display the processed results.
+
+for ch in sentence:
+    if ch == " ":
+        title_case += ch
+        new_word = True
+    else:
+        if new_word:
+            title_case += ch.upper()
+            new_word = False
+        else:
+            title_case += ch.lower()
+
+# Step 5: Display results
+print("\nCharacter Frequency (excluding spaces):", freq)
+
+if first_non_repeating:
+    print("First Non-Repeating Character:", first_non_repeating)
+else:
+    print("No non-repeating character found.")
+
+print("Title Case (without using title()):", title_case)
