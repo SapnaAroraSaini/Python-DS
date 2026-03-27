@@ -1,0 +1,21 @@
+import random
+
+# Step 1: Create a tuple of 15 random integers (range 1 to 20)
+tup = tuple(random.randint(1, 20) for _ in range(15))
+
+# Step 2: Convert tuple to set (removes duplicates)
+unique_set = set(tup)
+
+# Step 3: Find maximum and minimum values
+max_val = max(tup)
+min_val = min(tup)
+
+# Step 4: Find duplicate elements (removed in set)
+duplicates = set([x for x in tup if tup.count(x) > 1])
+
+# Step 5: Display results
+print("Original Tuple:", tup)
+print("Set (Unique Elements):", unique_set)
+print("Maximum Value:", max_val)
+print("Minimum Value:", min_val)
+print("Duplicate Elements (removed in set):", duplicates)
