@@ -1,3 +1,5 @@
+Give solutuon of the same WAP in Python to: Create a tuple of 15 random integers. Convert the tuple into a set to remove duplicates. Find: The maximum and minimum values Elements present in the original tuple but removed in the set (due to duplication) Display all results clearly.
+
 import random
 
 # Step 1: Create a tuple of 15 random integers (range 1 to 20)
