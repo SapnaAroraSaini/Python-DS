@@ -1,0 +1,28 @@
+WAP to create a function celsius_to_fahrenheit(c) that converts Celsius to Fahrenheit and print results for 3 values.
+def sap(c):
+    return (c * 9/5) + 32
+
+print(sap(0))
+print(sap(25))
+print(sap(40))
+
+
+///WAP to create a function check_even_odd(num) that returns whether a number is even or odd. Test it with 3 numbers.
+def sap(num):
+    if num % 2 == 0:
+        return "Even"
+    else:
+        return "Odd"
+
+print(sap(10))
+print(sap(7))
+print(sap(22))
+
+//WAP to create a function simple_interest(p, r, t) that calculates simple interest using formula:
+//SI = (P × R × T) / 100 and print output for given values.
+def sap(p, r, t):
+    return (p * r * t) / 100
+
+print(sap(1000, 5, 2))
+print(sap(2000, 3, 4))
+print(sap(1500, 6, 1))
